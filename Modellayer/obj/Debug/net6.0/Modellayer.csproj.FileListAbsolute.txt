@@ -1,0 +1,12 @@
+C:\Users\adsouza\source\repos\projtrial\Modellayer\bin\Debug\net6.0\Modellayer.deps.json
+C:\Users\adsouza\source\repos\projtrial\Modellayer\bin\Debug\net6.0\Modellayer.dll
+C:\Users\adsouza\source\repos\projtrial\Modellayer\bin\Debug\net6.0\Modellayer.pdb
+C:\Users\adsouza\source\repos\projtrial\Modellayer\obj\Debug\net6.0\Modellayer.csproj.AssemblyReference.cache
+C:\Users\adsouza\source\repos\projtrial\Modellayer\obj\Debug\net6.0\Modellayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adsouza\source\repos\projtrial\Modellayer\obj\Debug\net6.0\Modellayer.AssemblyInfoInputs.cache
+C:\Users\adsouza\source\repos\projtrial\Modellayer\obj\Debug\net6.0\Modellayer.AssemblyInfo.cs
+C:\Users\adsouza\source\repos\projtrial\Modellayer\obj\Debug\net6.0\Modellayer.csproj.CoreCompileInputs.cache
+C:\Users\adsouza\source\repos\projtrial\Modellayer\obj\Debug\net6.0\Modellayer.dll
+C:\Users\adsouza\source\repos\projtrial\Modellayer\obj\Debug\net6.0\refint\Modellayer.dll
+C:\Users\adsouza\source\repos\projtrial\Modellayer\obj\Debug\net6.0\Modellayer.pdb
+C:\Users\adsouza\source\repos\projtrial\Modellayer\obj\Debug\net6.0\ref\Modellayer.dll
