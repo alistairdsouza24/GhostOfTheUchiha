@@ -1,30 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Xml.Linq;
 
-namespace Modellayer
+namespace projtrial.Models
 {
-    public class Adduserdetails
+    public class TempData
     {
-        [Required(ErrorMessage ="please select the title required")]
-        [Column(TypeName ="VARCHAR(3)")]
+        [Required(ErrorMessage = "please select the title required")]
+        [Column(TypeName = "VARCHAR(3)")]
         [StringLength(3)]
-        public string Title { get; set; }=string.Empty;
+        public string Title { get; set; } = string.Empty;
         [Required]
         [Display(Name = "First Name")]
         [Column(TypeName = "VARCHAR")]
         [StringLength(20)]
         public string First_name { get; set; } = string.Empty;
         [Required]
-        [Display(Name="last Name")]
-        [Column(TypeName ="VARCHAR")]
+        [Display(Name = "last Name")]
+        [Column(TypeName = "VARCHAR")]
         [StringLength(20)]
-        public string Last_name { get; set; }=string.Empty;
-        [Required(ErrorMessage ="please select the gender")]
+        public string Last_name { get; set; } = string.Empty;
+        [Required(ErrorMessage = "please select the gender")]
         [Display(Name = "Gender")]
         [Column(TypeName = "VARCHAR")]
         [StringLength(7)]
@@ -35,7 +31,7 @@ namespace Modellayer
         [StringLength(20)]
         [Display(Name = "User Name")]
         public string UserName { get; set; } = string.Empty;
-        [Required(ErrorMessage ="enter the valid password")]
+        [Required(ErrorMessage = "enter the valid password")]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         [Column(TypeName = "VARCHAR")]
@@ -53,19 +49,19 @@ namespace Modellayer
         [Column(TypeName = "VARCHAR")]
 
         [RegularExpression(@"^[0-9]{10}$")]
-        public int Mobile_Number { get; set; } 
-        [Required(ErrorMessage ="address is required")]
+        public int Mobile_Number { get; set; }
+        [Required(ErrorMessage = "address is required")]
         [Display(Name = "Address")]
         [Column(TypeName = "VARCHAR")]
         [StringLength(35)]
-        public string Address { get; set; }=string.Empty;
-        [Required(ErrorMessage ="Country field is required")]
+        public string Address { get; set; } = string.Empty;
+        [Required(ErrorMessage = "Country field is required")]
         [Display(Name = "Country")]
         [Column(TypeName = "VARCHAR")]
         [StringLength(30)]
         public string Country { get; set; } = string.Empty;
-        [Required(ErrorMessage="Salary field is required" )]
-        [Range(1000,10000000)]
+        [Required(ErrorMessage = "Salary field is required")]
+        [Range(1000, 10000000)]
         [Display(Name = "Salary")]
         [Column(TypeName = "VARCHAR")]
         public int Salary { get; set; }
@@ -76,7 +72,6 @@ namespace Modellayer
         public string Designation { get; set; }
         [Display(Name = "Upload image")]
         public string upload_image { get; set; }
-
 
 
     }

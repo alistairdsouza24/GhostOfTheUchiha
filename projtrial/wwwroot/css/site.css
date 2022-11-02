@@ -15,4 +15,12 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color:antiquewhite;
+}
+.list{
+    color:purple;
+
+}
+.viewlink {
+    color:green;
 }

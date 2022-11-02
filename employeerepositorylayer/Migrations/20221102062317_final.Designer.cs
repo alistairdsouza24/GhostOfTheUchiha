@@ -12,8 +12,8 @@ using employeerepositorylayer;
 namespace Employee.Repository.Migrations
 {
     [DbContext(typeof(AppContextDB))]
-    [Migration("20221026061215_initialone")]
-    partial class initialone
+    [Migration("20221102062317_final")]
+    partial class final
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,50 +27,61 @@ namespace Employee.Repository.Migrations
             modelBuilder.Entity("Modellayer.Adduserdetails", b =>
                 {
                     b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(20)
+                        .HasColumnType("VARCHAR(20)");
 
                     b.Property<string>("Address")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(35)
+                        .HasColumnType("VARCHAR(35)");
 
                     b.Property<string>("Country")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("VARCHAR(30)");
 
                     b.Property<string>("Designation")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(15)
+                        .HasColumnType("VARCHAR(15)");
 
                     b.Property<string>("Email_ID")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(25)
+                        .HasColumnType("VARCHAR(25)");
 
                     b.Property<string>("First_name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(20)
+                        .HasColumnType("VARCHAR(20)");
 
                     b.Property<string>("Gender")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(7)
+                        .HasColumnType("VARCHAR(7)");
 
                     b.Property<string>("Last_name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(20)
+                        .HasColumnType("VARCHAR(20)");
 
-                    b.Property<int>("Mobile_Number")
-                        .HasColumnType("int");
+                    b.Property<string>("Mobile_Number")
+                        .IsRequired()
+                        .HasColumnType("VARCHAR(64)");
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(15)
+                        .HasColumnType("VARCHAR(15)");
 
                     b.Property<string>("Salary")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("VARCHAR(64)");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(3)
+                        .HasColumnType("VARCHAR(3)");
 
                     b.Property<string>("upload_image")
                         .IsRequired()
@@ -91,7 +102,8 @@ namespace Employee.Repository.Migrations
 
                     b.Property<string>("Add_designation")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("VARCHAR(30)");
 
                     b.HasKey("Id");
 
@@ -110,10 +122,6 @@ namespace Employee.Repository.Migrations
                     b.Property<byte[]>("PasswordSalt")
                         .IsRequired()
                         .HasColumnType("varbinary(max)");
-
-                    b.Property<string>("RefreshToken")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("TokenCreated")
                         .HasColumnType("datetime2");

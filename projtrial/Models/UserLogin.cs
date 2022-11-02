@@ -1,13 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace projtrial.Models
 {
     public class Userlogin
     {
-        [Required(ErrorMessage = "please enter username")]
-        public string? username { get; set; }
+        [Required]
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(30)]
+        public string? Username { get; set; }
+        [Required]
         [DataType(DataType.Password)]
-        [Required(ErrorMessage = "password is required")]
-        public string? password { get; set; }
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(30)]
+        public string? Password { get; set; }
     }
 }

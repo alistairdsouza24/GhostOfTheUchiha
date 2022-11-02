@@ -40,14 +40,14 @@ namespace projtrial.Controllers
             {
                 var client = new HttpClient();
                 client.BaseAddress = new Uri("https://localhost:7214");
-                List<Mdesignation>? designationTemp = new List<Mdesignation>();
+                List<MDesignation>? designationTemp = new List<MDesignation>();
 
                 HttpResponseMessage res = await client.GetAsync("api/Designation");
 
                 if (res.IsSuccessStatusCode)
                 {
                     var result = res.Content.ReadAsStringAsync().Result;
-                    designationTemp = JsonConvert.DeserializeObject<List<Mdesignation>>(result);
+                    designationTemp = JsonConvert.DeserializeObject<List<MDesignation>>(result);
                     ViewData["designationtemp"] = designationTemp;
                 }
                 return View();
@@ -59,7 +59,16 @@ namespace projtrial.Controllers
         {
             var client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:7214");
+            List<MDesignation>? designationTemp = new List<MDesignation>();
 
+            HttpResponseMessage res = await client.GetAsync("api/Designation");
+
+            if (res.IsSuccessStatusCode)
+            {
+                var result = res.Content.ReadAsStringAsync().Result;
+                designationTemp = JsonConvert.DeserializeObject<List<MDesignation>>(result);
+                ViewData["designationtemp"] = designationTemp;
+            }
             HttpResponseMessage postTask = client.PostAsJsonAsync("api/Values/Post", emp).Result;
 
 
@@ -70,17 +79,8 @@ namespace projtrial.Controllers
             return View();
 
            
-            List<Mdesignation>? designationTemp = new List<Mdesignation>();
-
-            HttpResponseMessage res = await client.GetAsync("api/Designation");
-
-            if (res.IsSuccessStatusCode)
-            {
-                var result = res.Content.ReadAsStringAsync().Result;
-                designationTemp = JsonConvert.DeserializeObject<List<Mdesignation>>(result);
-                ViewData["designationtemp"] = designationTemp;
-            }
-            return View();
+            
+            
         }
 
         public async Task<IActionResult> Delete(string UserName)
@@ -98,43 +98,43 @@ namespace projtrial.Controllers
         {
             var client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:7214");
-            List<Mdesignation>? designationTemp = new List<Mdesignation>();
+            List<MDesignation>? designationTemp = new List<MDesignation>();
 
             HttpResponseMessage des = await client.GetAsync("api/Designation");
 
             if (des.IsSuccessStatusCode)
             {
                 var result = des.Content.ReadAsStringAsync().Result;
-                designationTemp = JsonConvert.DeserializeObject<List<Mdesignation>>(result);
+                designationTemp = JsonConvert.DeserializeObject<List<MDesignation>>(result);
                 ViewData["designationtemp"] = designationTemp;
             }
 
 
 
 
-            Employeesdetail employee = new Employeesdetail();
+            TempData Tempdata = new TempData();
 
             HttpResponseMessage res = await client.GetAsync($"api/Values/get/{username}");
             if (res.IsSuccessStatusCode)
             {
                 var result = res.Content.ReadAsStringAsync().Result;
-                employee = JsonConvert.DeserializeObject<Employeesdetail>(result);
+                Tempdata = JsonConvert.DeserializeObject<TempData>(result);
             }
-            return View(employee);
+            return View(Tempdata);
         }
         [HttpPost]
-        public async Task<IActionResult> edit(Employeesdetail emp)
+        public async Task<IActionResult> edit(TempData emp)
         {
             var client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:7214");
-            List<Mdesignation>? designationTemp = new List<Mdesignation>();
+            List<MDesignation>? designationTemp = new List<MDesignation>();
 
             HttpResponseMessage des = await client.GetAsync("api/Designation");
 
             if (des.IsSuccessStatusCode)
             {
                 var result = des.Content.ReadAsStringAsync().Result;
-                designationTemp = JsonConvert.DeserializeObject<List<Mdesignation>>(result);
+                designationTemp = JsonConvert.DeserializeObject<List<MDesignation>>(result);
                 ViewData["designationtemp"] = designationTemp;
             }
             HttpResponseMessage postTask = client.PostAsJsonAsync("api/Values/edit", emp).Result;
@@ -151,11 +151,11 @@ namespace projtrial.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Designation( Mdesignation designationClass)
+        public async Task<IActionResult> Designation( MDesignation designationClass)
         {
             var client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:7214");
-            var postTask = client.PostAsJsonAsync<Mdesignation>("api/Designation/designation", designationClass);
+            var postTask = client.PostAsJsonAsync<MDesignation>("api/Designation/designation", designationClass);
 
             /*  var postTask = client.PostAsJsonAsync<DesignationClass>("api/Designation/Designation", designationClass)*/
             postTask.Wait();

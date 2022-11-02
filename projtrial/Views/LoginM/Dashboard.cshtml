@@ -2,16 +2,17 @@
 @{
     ViewData["Title"] = "DashBoard";
 }
-
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 <h1>DashBoard</h1>
 
 <head>
 </head>
 <body>
     <div class="d-flex align-items-center justify-content-center">
-        <a asp-area="" asp-controller="Home" asp-action="ViewEmployee">View Employee List</a>|
-        <a asp-area="" asp-controller="Home" asp-action="Create">Add New Employee</a>|
-        <a asp-area="" asp-controller="Home" asp-action="Designation">Add New Designation</a>
+        <div class="viewlink">
+        <a asp-area="" asp-controller="Home" asp-action="ViewEmployee">View Employee List</a></div>|</br>
+       <div class="Createv"> <a asp-area="" asp-controller="Home" asp-action="Create">Add New Employee</a></div>|</br>
+      <div class="designation"><a asp-area="" asp-controller="Home" asp-action="Designation">Add New Designation</a></div>
     </div>
 
 </body>

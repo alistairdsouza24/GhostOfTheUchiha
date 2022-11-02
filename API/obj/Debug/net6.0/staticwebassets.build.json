@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kkJp5YXqQ3jBeG35dipqLa41pRKN+nHF2ohKlrhfqZ0=",
+  "Hash": "zUUOE+uctC1m9S2koD7VpgXa67PSUvHVT2DLZuuZAFo=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -95,6 +95,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\adsouza\\source\\repos\\projtrial\\projtrial\\wwwroot\\index.html",
+      "SourceId": "projtrial",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\adsouza\\source\\repos\\projtrial\\projtrial\\wwwroot\\",
+      "BasePath": "_content/projtrial",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\adsouza\\source\\repos\\projtrial\\projtrial\\wwwroot\\index2.html",
+      "SourceId": "projtrial",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\adsouza\\source\\repos\\projtrial\\projtrial\\wwwroot\\",
+      "BasePath": "_content/projtrial",
+      "RelativePath": "index2.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index2.html"
+    },
+    {
+      "Identity": "C:\\Users\\adsouza\\source\\repos\\projtrial\\projtrial\\wwwroot\\index3.html",
+      "SourceId": "projtrial",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\adsouza\\source\\repos\\projtrial\\projtrial\\wwwroot\\",
+      "BasePath": "_content/projtrial",
+      "RelativePath": "index3.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index3.html"
     },
     {
       "Identity": "C:\\Users\\adsouza\\source\\repos\\projtrial\\projtrial\\wwwroot\\js\\site.js",
@@ -1081,6 +1132,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\adsouza\\source\\repos\\projtrial\\projtrial\\wwwroot\\starter.html",
+      "SourceId": "projtrial",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\adsouza\\source\\repos\\projtrial\\projtrial\\wwwroot\\",
+      "BasePath": "_content/projtrial",
+      "RelativePath": "starter.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\starter.html"
     }
   ]
 }

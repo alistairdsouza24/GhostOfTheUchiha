@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Create";
 }
-
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 <h1>Create</h1>
 
 <h4>Employeesdetail</h4>
@@ -331,7 +331,7 @@
                 <span><label asp-for="Designation" class="control-label"></label></span>
                <select asp-for="Designation" class="form-select">
                           <option value="none" selected disabled hidden>Select an Option</option>
-                    @foreach (var item in ViewData["designationtemp"] as IList<Mdesignation>)
+                    @foreach (var item in ViewData["designationtemp"] as IList<MDesignation>)
                     {
                                     <option value="@item.Add_designation">@item.Add_designation</option>
                     }
@@ -351,7 +351,7 @@
     </div>
 </div>
 
-<div>
+<div class="list">
     <a asp-action="ViewEmployee">Back to List</a>
 </div>
 
